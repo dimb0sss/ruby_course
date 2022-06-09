@@ -56,7 +56,28 @@
 # range = ("A".."Z")
 # range.each { |l|puts l }
 
-hash = {a:1,b:2}
-hash.each { |key,value|puts "#{key} = #{value}" }
+# hash = {a:1,b:2}
+# hash.each { |key,value|puts "#{key} = #{value}" }
 
+months = {'january':31,'febrary':28,'march':31,'april':30,'may':31,'june':30}
 
+# months.each { |month, day|
+#   if day == 30
+#     puts month
+#   end
+# }
+#
+# array=[]
+# i=10
+# while i <= 100 do
+#   array.push(i)
+#   i+=5
+# end
+#
+# puts array
+puts months\
+.class
+
+BEGIN {
+  puts 'BEGIN'
+}
