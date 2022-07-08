@@ -44,7 +44,7 @@ class Car
   attr_reader :current_rpm
   attr_accessor :number
 
-  NUMBER_FORMAT = /^[а-яА-Я]{1}\d{3}[а-яА-Я]{2}/i
+  NUMBER_FORMAT = /^[а-я]{1}\d{3}[а-я]{2}$/i
 
   @@instances = 0
 
@@ -79,7 +79,8 @@ class Car
   attr_writer :current_rpm
 
   def validate!
-    raise "Number can-t be" if number !~ NUMBER_FORMAT
+    raise "Number can-t null" if number.nil?
+    raise "Number can-t be format" if number !~ NUMBER_FORMAT
     raise "Number should be at 6 symbols" if number.length<6
     true
   end
@@ -95,7 +96,7 @@ class Car
 end
 
 
-car = Car.new("в123ыв")
+car = Car.new("В123ыв")
 puts car.valid?
 car.number="123"
 puts car.valid?
